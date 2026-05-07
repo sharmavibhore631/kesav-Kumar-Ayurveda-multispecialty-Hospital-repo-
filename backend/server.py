@@ -77,6 +77,10 @@ def decrypt_text(value: str) -> str:
         return value
 
 
+async def _insert_audit_doc(audit_doc: dict) -> None:
+    await db.audit_logs.insert_one(audit_doc)
+
+
 def log_audit(collection_name: str, record_id: str, action: str, user: dict, details: dict):
     audit_doc = {
         "collection": collection_name,
@@ -87,7 +91,7 @@ def log_audit(collection_name: str, record_id: str, action: str, user: dict, det
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "details": details
     }
-    asyncio.create_task(db.audit_logs.insert_one(audit_doc))
+    return asyncio.create_task(_insert_audit_doc(audit_doc))
 
 
 def create_access_token(user_id: str, email: str) -> str:
@@ -315,7 +319,7 @@ async def create_patient(input: PatientInput, request: Request):
         "updated_by": user["email"]
     }
     await db.patients.insert_one(patient_doc)
-    await log_audit("patients", patient_id, "create", user, {"patient": patient_doc})
+    log_audit("patients", patient_id, "create", user, {"patient": patient_doc})
     created = await db.patients.find_one({"id": patient_id}, {"_id": 0})
     created["phone"] = decrypt_text(created.get("phone", ""))
     created["address"] = decrypt_text(created.get("address", ""))
@@ -361,7 +365,7 @@ async def update_patient(patient_id: str, input: PatientInput, request: Request)
     )
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="Patient not found")
-    await log_audit("patients", patient_id, "update", user, {"before": existing, "after": {"name": input.name, "age": input.age, "gender": input.gender, "blood_group": input.blood_group}})
+    log_audit("patients", patient_id, "update", user, {"before": existing, "after": {"name": input.name, "age": input.age, "gender": input.gender, "blood_group": input.blood_group}})
     return {"message": "Patient updated"}
 
 
@@ -380,7 +384,7 @@ async def delete_patient(patient_id: str, request: Request):
     )
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="Patient not found")
-    await log_audit("patients", patient_id, "delete", user, {"deleted_at": deleted_at, "deleted_by": user["email"]})
+    log_audit("patients", patient_id, "delete", user, {"deleted_at": deleted_at, "deleted_by": user["email"]})
     return {"message": "Patient soft deleted"}
 
 
@@ -898,8 +902,9 @@ async def seed_admin():
                 {"$set": {"password_hash": hash_password(doc["password"])}}
             )
 
-    os.makedirs("/app/memory", exist_ok=True)
-    with open("/app/memory/test_credentials.md", "w") as f:
+    memory_folder = Path(__file__).resolve().parents[1] / "memory"
+    memory_folder.mkdir(parents=True, exist_ok=True)
+    with open(memory_folder / "test_credentials.md", "w", encoding="utf-8") as f:
         f.write("# Test Credentials\n\n")
         f.write(f"## Admin\n- Email: {admin_email}\n- Password: {admin_password}\n- Role: admin\n\n")
         f.write("## Doctors\n")
@@ -911,3 +916,14 @@ async def seed_admin():
 @app.on_event("shutdown")
 async def shutdown():
     client.close()
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        "server:app",
+        host=os.environ.get("BACKEND_HOST", "0.0.0.0"),
+        port=int(os.environ.get("BACKEND_PORT", "8000")),
+        log_level="info",
+    )

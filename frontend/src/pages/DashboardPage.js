@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Users, CalendarDays, Package, DollarSign, AlertTriangle, Stethoscope } from 'lucide-react';
+import { Badge } from '../components/ui/badge';
+import { Users, CalendarDays, IndianRupee, AlertTriangle, Stethoscope } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const API = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
@@ -37,7 +38,7 @@ export default function DashboardPage() {
     { label: t('totalPatients'), value: stats?.total_patients || 0, icon: Users, color: '#0EA5E9', bg: 'bg-sky-50 dark:bg-sky-900/20' },
     { label: t('todaysAppointments'), value: stats?.today_appointments || 0, icon: CalendarDays, color: '#10B981', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
     { label: t('doctorsCount'), value: stats?.total_doctors || 0, icon: Stethoscope, color: '#8B5CF6', bg: 'bg-violet-50 dark:bg-violet-900/20' },
-    { label: t('todaysRevenue'), value: `₹${(stats?.today_revenue || 0).toLocaleString('en-IN')}`, icon: DollarSign, color: '#F59E0B', bg: 'bg-amber-50 dark:bg-amber-900/20' },
+    { label: t('todaysRevenue'), value: `₹${(stats?.today_revenue || 0).toLocaleString('en-IN')}`, icon: IndianRupee, color: '#F59E0B', bg: 'bg-amber-50 dark:bg-amber-900/20' },
     { label: t('lowStockItems'), value: stats?.low_stock_items || 0, icon: AlertTriangle, color: stats?.low_stock_items > 0 ? '#DC2626' : '#10B981', bg: stats?.low_stock_items > 0 ? 'bg-red-50 dark:bg-red-900/20' : 'bg-emerald-50 dark:bg-emerald-900/20' },
   ];
 
@@ -46,6 +47,8 @@ export default function DashboardPage() {
     { name: t('completed'), value: stats.appointment_breakdown.completed },
     { name: t('cancelled'), value: stats.appointment_breakdown.cancelled },
   ].filter(d => d.value > 0) : [];
+
+  const scheduledQueue = stats?.recent_appointments?.filter(a => a.status === 'scheduled') || [];
 
   return (
     <div data-testid="dashboard-page" className="space-y-6">
@@ -155,6 +158,29 @@ export default function DashboardPage() {
                       a.status === 'completed' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
                       'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
                     }`}>{a.status}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-muted-foreground text-center py-8">{t('noAppointmentsYet')}</p>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card className="border border-border shadow-none">
+          <CardHeader><CardTitle className="text-lg font-medium" style={{ fontFamily: 'Manrope, sans-serif' }}>{t('liveQueue')}</CardTitle></CardHeader>
+          <CardContent>
+            {scheduledQueue.length > 0 ? (
+              <div className="space-y-3">
+                {scheduledQueue.map(a => (
+                  <div key={a.id} className="flex items-center justify-between py-2 border-b border-border last:border-0">
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{a.patient_name}</p>
+                      <p className="text-xs text-muted-foreground">Dr. {a.doctor_name} &middot; {a.date}</p>
+                    </div>
+                    <Badge className="bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400 text-xs px-2 py-1 rounded-full">{t('scheduled')}</Badge>
                   </div>
                 ))}
               </div>

@@ -1,0 +1,101 @@
+{
+  "patients": [
+    {
+      "id": "P-F39CD193",
+      "name": "vibhore sharma",
+      "age": 24,
+      "gender": "Male",
+      "phone": "9668872405",
+      "address": "lovely professional university",
+      "blood_group": "O+",
+      "created_at": "2026-04-28T16:46:09.976572+00:00",
+      "created_by": "ramavatar.sharma@kumarayurveda.com"
+    }
+  ],
+  "appointments": [],
+  "bills": [
+    {
+      "id": "BILL-AB9DA75E",
+      "patient_id": "P-F39CD193",
+      "patient_name": "vibhore sharma",
+      "items": [
+        {
+          "description": "rther",
+          "amount": 0.17
+        }
+      ],
+      "total_amount": 0.17,
+      "status": "paid",
+      "notes": "db",
+      "created_at": "2026-04-29T19:47:22.749150+00:00",
+      "created_by": "jolly.sharma@kumarayurveda.com"
+    }
+  ],
+  "login_attempts": [
+    {
+      "identifier": "127.0.0.1:helpdesk1@kumarayurveda.co",
+      "count": 5,
+      "locked_until": "2026-04-29T19:43:57.201488+00:00"
+    }
+  ],
+  "inventory": [],
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password_hash": "$2b$12$5DSdWL0XAU4sqYXW8ZvnBe7WE9TSAvtJXNBj/W8BHs0gGCywmpB0.",
+      "name": "Admin",
+      "role": "admin",
+      "created_at": "2026-04-28T16:39:55.192445+00:00"
+    },
+    {
+      "email": "vijay.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$OyVxJLJhzAQHHNppBc94COvjV.pjKi3bz0ARS5C/fO06tckcGNBpC",
+      "name": "Vaidy Vijay Sharma",
+      "role": "doctor",
+      "specialization": "General Ayurveda",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.466108+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u0935\u093f\u091c\u092f \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "ramavatar.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$B4QAJG51ib6MNkYlGxMYU.GlrpyoB1S2eZdmrJgQo8wTYkQGHs6VW",
+      "name": "Vaidy Ramavatar Sharma",
+      "role": "doctor",
+      "specialization": "General Ayurveda",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.691878+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u0930\u093e\u092e\u093e\u0935\u0924\u093e\u0930 \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "jolly.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$q/NABCrohqlcH8yjGZP/E.LVmdPT7E3aJXTo/3o8Loi2QWrDCu2tO",
+      "name": "Vaidy Jolly Sharma",
+      "role": "doctor",
+      "specialization": "Gynecologist (Female Health Specialist)",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.914345+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u091c\u0949\u0932\u0940 \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "helpdesk1@kumarayurveda.com",
+      "password_hash": "$2b$12$ri7AujIPsB/TXz0eCR36juglH2w3O4eCCz6g3PWR.X2R8eJLdXExy",
+      "name": "Rajesh Kumar",
+      "name_hindi": "\u0930\u093e\u091c\u0947\u0936 \u0915\u0941\u092e\u093e\u0930",
+      "role": "helpdesk",
+      "phone": "",
+      "created_at": "2026-04-29T14:49:05.965706+00:00"
+    },
+    {
+      "email": "helpdesk2@kumarayurveda.com",
+      "password_hash": "$2b$12$KRQbQzFlEu7BmiODqpISgumP9R..jxH3iqlwX6Men/OoYHcYU9gAi",
+      "name": "Priya Singh",
+      "name_hindi": "\u092a\u094d\u0930\u093f\u092f\u093e \u0938\u093f\u0902\u0939",
+      "role": "helpdesk",
+      "phone": "",
+      "created_at": "2026-04-29T14:49:06.231372+00:00"
+    }
+  ],
+  "prescriptions": [],
+  "audit_logs": []
+}

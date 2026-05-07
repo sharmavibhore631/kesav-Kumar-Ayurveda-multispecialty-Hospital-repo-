@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'sonner';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { ArrowLeft, User, Phone, MapPin, Droplets, CalendarDays, FileText, Receipt } from 'lucide-react';
+import { ArrowLeft, User, Phone, MapPin, Droplets, CalendarDays, FileText, Receipt, Trash2 } from 'lucide-react';
 
 const API = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
 
@@ -16,6 +17,7 @@ export default function PatientDetailPage() {
   const { t } = useLanguage();
   const [patient, setPatient] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => { fetchPatient(); }, [id]);
 
@@ -27,14 +29,33 @@ export default function PatientDetailPage() {
     finally { setLoading(false); }
   };
 
+  const handleDelete = async () => {
+    if (!window.confirm(`${t('deletePatientConfirm')} ${patient.name}?`)) return;
+    setDeleting(true);
+    try {
+      await axios.delete(`${API}/api/patients/${id}`);
+      toast.success(t('patientDeleted'));
+      navigate('/patients');
+    } catch (err) {
+      toast.error(err.response?.data?.detail || t('failedToDeletePatient'));
+    } finally {
+      setDeleting(false);
+    }
+  };
+
   if (loading) return <div className="space-y-4">{[...Array(3)].map((_, i) => <div key={i} className="h-32 bg-card rounded-lg border border-border animate-pulse" />)}</div>;
   if (!patient) return null;
 
   return (
     <div data-testid="patient-detail-page" className="space-y-6">
-      <Button variant="ghost" onClick={() => navigate('/patients')} className="text-muted-foreground hover:text-foreground" data-testid="back-to-patients">
-        <ArrowLeft size={16} className="mr-2" /> {t('backToPatients')}
-      </Button>
+      <div className="flex items-center justify-between">
+        <Button variant="ghost" onClick={() => navigate('/patients')} className="text-muted-foreground hover:text-foreground" data-testid="back-to-patients">
+          <ArrowLeft size={16} className="mr-2" /> {t('backToPatients')}
+        </Button>
+        <Button variant="ghost" className="text-red-600 hover:text-red-800" onClick={handleDelete} disabled={deleting} data-testid="delete-patient-button">
+          <Trash2 size={16} className="mr-2" /> {t('deletePatient')}
+        </Button>
+      </div>
 
       <Card className="border border-border shadow-none">
         <CardContent className="p-6">

@@ -10,7 +10,7 @@ import { Badge } from '../components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Plus, Receipt, DollarSign, CheckCircle, XCircle } from 'lucide-react';
+import { Plus, Receipt, IndianRupee, CheckCircle, XCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const API = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
@@ -109,7 +109,7 @@ export default function BillingPage() {
         <Card className="border border-border shadow-none">
           <CardContent className="p-5">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-amber-50 dark:bg-amber-900/20 rounded-lg flex items-center justify-center"><DollarSign size={20} className="text-amber-500" /></div>
+              <div className="w-10 h-10 bg-amber-50 dark:bg-amber-900/20 rounded-lg flex items-center justify-center"><IndianRupee size={20} className="text-amber-500" /></div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">{t('thirtyDayRevenue')}</p>
                 <p className="text-2xl font-bold text-foreground" style={{ fontFamily: 'Manrope, sans-serif' }}>₹{(revenue?.total_30_days || 0).toLocaleString('en-IN')}</p>

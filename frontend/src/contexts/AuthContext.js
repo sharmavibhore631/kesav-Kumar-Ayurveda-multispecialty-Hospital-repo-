@@ -7,6 +7,14 @@ const API = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
 
 // Set axios defaults
 axios.defaults.withCredentials = true;
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem('auth_token');
+  if (token) {
+    config.headers = config.headers || {};
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 function setAuthHeader(token) {
   if (token) {

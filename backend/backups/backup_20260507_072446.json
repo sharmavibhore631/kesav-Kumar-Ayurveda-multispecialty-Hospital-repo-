@@ -1,0 +1,494 @@
+{
+  "patients": [
+    {
+      "id": "P-F39CD193",
+      "name": "vibhore sharma",
+      "age": 24,
+      "gender": "Male",
+      "phone": "9668872405",
+      "address": "lovely professional university",
+      "blood_group": "O+",
+      "created_at": "2026-04-28T16:46:09.976572+00:00",
+      "created_by": "ramavatar.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-317C3D25",
+      "name": "vibhore sharma",
+      "age": 29,
+      "gender": "Male",
+      "phone": "gAAAAABp-ZSnm9rNyrGnXO6xuUqfgtIMUNklNzXZUazivjHzgEgUouCScpJd5K0veP98od1ZcZ8BGvKgxYDVjH1YzdUqghowqQ==",
+      "phone_search": "09668872405",
+      "address": "gAAAAABp-ZSnx5r2L9GEo-qqmL2BjaBwKX4NZy1YyEyW2uskd341NIs8lvRI7uKzXZRcAy4zoLlNbiVpDlgc5O1hx2glXLJNZfEFm7net-5KacpBbqaE0wI=",
+      "blood_group": "O-",
+      "created_at": "2026-05-05T06:56:39.246992+00:00",
+      "updated_at": "2026-05-05T07:33:08.619094+00:00",
+      "deleted_at": "2026-05-05T07:33:08.619094+00:00",
+      "is_deleted": true,
+      "created_by": "vijay.sharma@kumarayurveda.com",
+      "updated_by": "vijay.sharma@kumarayurveda.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-BD804CA5",
+      "name": "Ekta Sharma",
+      "age": 43,
+      "gender": "Male",
+      "phone": "gAAAAABp-Zh4IJ9lT25qDFuCShgxLbhm01ztb5hHftDR-nwgvQp8DFV5qysWWr5TMMO5-1sVBDsL9ZCiVg17rL1nELzj3apkYg==",
+      "phone_search": "08709360143",
+      "address": "gAAAAABp-Zh4pGz4tfcYfTim-lqd88Vldr2D0sKMhSoTe-pl13zS4LjyB_J5FEAu99b1zp05Tc9q1U9JZMJ4Ow-VOmkcVCr5bQ==",
+      "blood_group": "O+",
+      "created_at": "2026-05-05T07:12:56.162333+00:00",
+      "updated_at": "2026-05-05T07:33:06.607818+00:00",
+      "deleted_at": "2026-05-05T07:33:06.607818+00:00",
+      "is_deleted": true,
+      "created_by": "vijay.sharma@kumarayurveda.com",
+      "updated_by": "vijay.sharma@kumarayurveda.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-8D02B7FA",
+      "name": "Shreya Khandelwal",
+      "age": 37,
+      "gender": "Female",
+      "phone": "gAAAAABp-ZlvH324DNGpERqXR1Sk1_xUpYkRTWOQMAqavS0feZFvWLwDVaIpgNAvTOH7yA5VVAg-L0iC0xhz2OOwVXLlea1K9Q==",
+      "phone_search": "08709360143",
+      "address": "gAAAAABp-ZlvScl22vhxrBC1u4sNvzSlECgHK5KY6nUqv-LLLk7M1pq8jWWV_zrvr4dz5Bx5d5DmR_FFk08lkk3VN6L7DJDPor2bTEpeu-OZJYtkeYwmVUg0jjlTNn9Cgos8yXgS4slJ1Joqm9d8LHWcvboyZzlELvQsdYkhh8CSGjSyqB-H-YQ=",
+      "blood_group": "O-",
+      "created_at": "2026-05-05T07:17:03.715169+00:00",
+      "updated_at": "2026-05-05T07:33:04.944560+00:00",
+      "deleted_at": "2026-05-05T07:33:04.944560+00:00",
+      "is_deleted": true,
+      "created_by": "vijay.sharma@kumarayurveda.com",
+      "updated_by": "vijay.sharma@kumarayurveda.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-5E103C9D",
+      "name": "Test Patient",
+      "age": 30,
+      "gender": "Male",
+      "phone": "gAAAAABp-ZpDmHcT9Yly2HVTeCCqvGj39iWM7bsKyu9CXjq9LUZvNwNMdQsIqdsVp7K63WhNTLIiBZTJvzlsGwcXgq1H7Q0F1w==",
+      "phone_search": "9876543210",
+      "address": "gAAAAABp-ZpDFkACOOUg4dCYvcu8E52NY-XaWcAMuF7_Gw2eaDtJYCKh3mHB9xyczv95NerJP7uWa8yuWDDXCDw-rc0RNbSJDg==",
+      "blood_group": "A+",
+      "created_at": "2026-05-05T07:20:35.970900+00:00",
+      "updated_at": "2026-05-05T07:33:00.991582+00:00",
+      "deleted_at": "2026-05-05T07:33:00.991582+00:00",
+      "is_deleted": true,
+      "created_by": "admin@example.com",
+      "updated_by": "admin@example.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-C16B625C",
+      "name": "Test Patient",
+      "age": 30,
+      "gender": "Male",
+      "phone": "gAAAAABp-ZroYMRrZQN_1BEWW1TsfWIAhiPOIbO3AmvPQZkaP5KxqDNfzJJNJxnbX6lFM3DhHH5wDDqSwEAvG-tbUGbFHAc5IA==",
+      "phone_search": "9876543210",
+      "address": "gAAAAABp-Zro1ZsdWxpuV1oreujdr7bL_8RVxo8z9Y0IAmRln6AwsPDlnm-XVPpFy0ZUv0u6bFNeW3MW87eKic2e-avqasWdhA==",
+      "blood_group": "A+",
+      "created_at": "2026-05-05T07:23:20.474039+00:00",
+      "updated_at": "2026-05-05T07:32:59.512986+00:00",
+      "deleted_at": "2026-05-05T07:32:59.512986+00:00",
+      "is_deleted": true,
+      "created_by": "admin@example.com",
+      "updated_by": "admin@example.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-A624C992",
+      "name": "Test Patient",
+      "age": 30,
+      "gender": "Male",
+      "phone": "gAAAAABp-ZsO_hRWxxAOzdOzuiQuMzm9XMDss33OQ78BuK7xYfJ5GbZQTd628Ge9Zj_2xqIgAxwrU7-ybr6_OLGeIDlhxvQVhw==",
+      "phone_search": "9876543210",
+      "address": "gAAAAABp-ZsOVeBvWf2G4ZFo_T97HOhph7lTHY3Ec0uPKzDzgjLy4Kqydpv3uUxr7fpePUEjEFTcCTUbAM_btVn8oeW2ELtxXQ==",
+      "blood_group": "A+",
+      "created_at": "2026-05-05T07:23:58.313748+00:00",
+      "updated_at": "2026-05-05T07:32:57.882173+00:00",
+      "deleted_at": "2026-05-05T07:32:57.882173+00:00",
+      "is_deleted": true,
+      "created_by": "admin@example.com",
+      "updated_by": "admin@example.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    },
+    {
+      "id": "P-A46110B6",
+      "name": "vibhore sharma",
+      "age": 29,
+      "gender": "Male",
+      "phone": "gAAAAABp-ZwoN5n5YWENprTp5L2F_cjqYl9l--XIWiV5KcPKm1cfUn1c7gy_uiOs3vTrYliGUZbARBzStHIj8hb-SSsISlbbVw==",
+      "phone_search": "09668872405",
+      "address": "gAAAAABp-ZwoESBBliRVRDcwQWcH8C3rSDn-tJnoH63Yc3NCcbxuhqeP0eEUM99NZWwgEHDXLb9Rk5S7w2r9lnA4a_SE-sUdItpJEF7sajY6Oe6Et4jT3js=",
+      "blood_group": "O-",
+      "created_at": "2026-05-05T07:28:40.506861+00:00",
+      "updated_at": "2026-05-05T07:32:56.241000+00:00",
+      "deleted_at": "2026-05-05T07:32:56.241000+00:00",
+      "is_deleted": true,
+      "created_by": "vijay.sharma@kumarayurveda.com",
+      "updated_by": "vijay.sharma@kumarayurveda.com",
+      "deleted_by": "vijay.sharma@kumarayurveda.com"
+    }
+  ],
+  "appointments": [],
+  "bills": [
+    {
+      "id": "BILL-AB9DA75E",
+      "patient_id": "P-F39CD193",
+      "patient_name": "vibhore sharma",
+      "items": [
+        {
+          "description": "rther",
+          "amount": 0.17
+        }
+      ],
+      "total_amount": 0.17,
+      "status": "paid",
+      "notes": "db",
+      "created_at": "2026-04-29T19:47:22.749150+00:00",
+      "created_by": "jolly.sharma@kumarayurveda.com"
+    }
+  ],
+  "login_attempts": [
+    {
+      "identifier": "127.0.0.1:helpdesk1@kumarayurveda.co",
+      "count": 5,
+      "locked_until": "2026-04-29T19:43:57.201488+00:00"
+    }
+  ],
+  "inventory": [],
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password_hash": "$2b$12$5DSdWL0XAU4sqYXW8ZvnBe7WE9TSAvtJXNBj/W8BHs0gGCywmpB0.",
+      "name": "Admin",
+      "role": "admin",
+      "created_at": "2026-04-28T16:39:55.192445+00:00"
+    },
+    {
+      "email": "vijay.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$OyVxJLJhzAQHHNppBc94COvjV.pjKi3bz0ARS5C/fO06tckcGNBpC",
+      "name": "Vaidy Vijay Sharma",
+      "role": "doctor",
+      "specialization": "General Ayurveda",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.466108+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u0935\u093f\u091c\u092f \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "ramavatar.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$B4QAJG51ib6MNkYlGxMYU.GlrpyoB1S2eZdmrJgQo8wTYkQGHs6VW",
+      "name": "Vaidy Ramavatar Sharma",
+      "role": "doctor",
+      "specialization": "General Ayurveda",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.691878+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u0930\u093e\u092e\u093e\u0935\u0924\u093e\u0930 \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "jolly.sharma@kumarayurveda.com",
+      "password_hash": "$2b$12$q/NABCrohqlcH8yjGZP/E.LVmdPT7E3aJXTo/3o8Loi2QWrDCu2tO",
+      "name": "Vaidy Jolly Sharma",
+      "role": "doctor",
+      "specialization": "Gynecologist (Female Health Specialist)",
+      "phone": "",
+      "created_at": "2026-04-28T16:39:55.914345+00:00",
+      "name_hindi": "\u0935\u0948\u0926\u094d\u092f \u091c\u0949\u0932\u0940 \u0936\u0930\u094d\u092e\u093e"
+    },
+    {
+      "email": "helpdesk1@kumarayurveda.com",
+      "password_hash": "$2b$12$ri7AujIPsB/TXz0eCR36juglH2w3O4eCCz6g3PWR.X2R8eJLdXExy",
+      "name": "Rajesh Kumar",
+      "name_hindi": "\u0930\u093e\u091c\u0947\u0936 \u0915\u0941\u092e\u093e\u0930",
+      "role": "helpdesk",
+      "phone": "",
+      "created_at": "2026-04-29T14:49:05.965706+00:00"
+    },
+    {
+      "email": "helpdesk2@kumarayurveda.com",
+      "password_hash": "$2b$12$KRQbQzFlEu7BmiODqpISgumP9R..jxH3iqlwX6Men/OoYHcYU9gAi",
+      "name": "Priya Singh",
+      "name_hindi": "\u092a\u094d\u0930\u093f\u092f\u093e \u0938\u093f\u0902\u0939",
+      "role": "helpdesk",
+      "phone": "",
+      "created_at": "2026-04-29T14:49:06.231372+00:00"
+    }
+  ],
+  "prescriptions": [],
+  "audit_logs": [
+    {
+      "collection": "patients",
+      "record_id": "P-317C3D25",
+      "action": "create",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T06:56:39.288521+00:00",
+      "details": {
+        "patient": {
+          "id": "P-317C3D25",
+          "name": "vibhore sharma",
+          "age": 29,
+          "gender": "Male",
+          "phone": "gAAAAABp-ZSnm9rNyrGnXO6xuUqfgtIMUNklNzXZUazivjHzgEgUouCScpJd5K0veP98od1ZcZ8BGvKgxYDVjH1YzdUqghowqQ==",
+          "phone_search": "09668872405",
+          "address": "gAAAAABp-ZSnx5r2L9GEo-qqmL2BjaBwKX4NZy1YyEyW2uskd341NIs8lvRI7uKzXZRcAy4zoLlNbiVpDlgc5O1hx2glXLJNZfEFm7net-5KacpBbqaE0wI=",
+          "blood_group": "O-",
+          "created_at": "2026-05-05T06:56:39.246992+00:00",
+          "updated_at": "2026-05-05T06:56:39.246992+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "vijay.sharma@kumarayurveda.com",
+          "updated_by": "vijay.sharma@kumarayurveda.com",
+          "_id": "69f994a7e7c42873cd0cf5c3"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-BD804CA5",
+      "action": "create",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:12:56.179966+00:00",
+      "details": {
+        "patient": {
+          "id": "P-BD804CA5",
+          "name": "Ekta Sharma",
+          "age": 43,
+          "gender": "Male",
+          "phone": "gAAAAABp-Zh4IJ9lT25qDFuCShgxLbhm01ztb5hHftDR-nwgvQp8DFV5qysWWr5TMMO5-1sVBDsL9ZCiVg17rL1nELzj3apkYg==",
+          "phone_search": "08709360143",
+          "address": "gAAAAABp-Zh4pGz4tfcYfTim-lqd88Vldr2D0sKMhSoTe-pl13zS4LjyB_J5FEAu99b1zp05Tc9q1U9JZMJ4Ow-VOmkcVCr5bQ==",
+          "blood_group": "O+",
+          "created_at": "2026-05-05T07:12:56.162333+00:00",
+          "updated_at": "2026-05-05T07:12:56.162333+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "vijay.sharma@kumarayurveda.com",
+          "updated_by": "vijay.sharma@kumarayurveda.com",
+          "_id": "69f99878e7c42873cd0cf5c5"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-8D02B7FA",
+      "action": "create",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:17:03.717687+00:00",
+      "details": {
+        "patient": {
+          "id": "P-8D02B7FA",
+          "name": "Shreya Khandelwal",
+          "age": 37,
+          "gender": "Female",
+          "phone": "gAAAAABp-ZlvH324DNGpERqXR1Sk1_xUpYkRTWOQMAqavS0feZFvWLwDVaIpgNAvTOH7yA5VVAg-L0iC0xhz2OOwVXLlea1K9Q==",
+          "phone_search": "08709360143",
+          "address": "gAAAAABp-ZlvScl22vhxrBC1u4sNvzSlECgHK5KY6nUqv-LLLk7M1pq8jWWV_zrvr4dz5Bx5d5DmR_FFk08lkk3VN6L7DJDPor2bTEpeu-OZJYtkeYwmVUg0jjlTNn9Cgos8yXgS4slJ1Joqm9d8LHWcvboyZzlELvQsdYkhh8CSGjSyqB-H-YQ=",
+          "blood_group": "O-",
+          "created_at": "2026-05-05T07:17:03.715169+00:00",
+          "updated_at": "2026-05-05T07:17:03.715169+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "vijay.sharma@kumarayurveda.com",
+          "updated_by": "vijay.sharma@kumarayurveda.com",
+          "_id": "69f9996fe7c42873cd0cf5c7"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-5E103C9D",
+      "action": "create",
+      "user_email": "admin@example.com",
+      "user_role": "admin",
+      "timestamp": "2026-05-05T07:20:35.978249+00:00",
+      "details": {
+        "patient": {
+          "id": "P-5E103C9D",
+          "name": "Test Patient",
+          "age": 30,
+          "gender": "Male",
+          "phone": "gAAAAABp-ZpDmHcT9Yly2HVTeCCqvGj39iWM7bsKyu9CXjq9LUZvNwNMdQsIqdsVp7K63WhNTLIiBZTJvzlsGwcXgq1H7Q0F1w==",
+          "phone_search": "9876543210",
+          "address": "gAAAAABp-ZpDFkACOOUg4dCYvcu8E52NY-XaWcAMuF7_Gw2eaDtJYCKh3mHB9xyczv95NerJP7uWa8yuWDDXCDw-rc0RNbSJDg==",
+          "blood_group": "A+",
+          "created_at": "2026-05-05T07:20:35.970900+00:00",
+          "updated_at": "2026-05-05T07:20:35.970900+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "admin@example.com",
+          "updated_by": "admin@example.com",
+          "_id": "69f99a43e7c42873cd0cf5c9"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-C16B625C",
+      "action": "create",
+      "user_email": "admin@example.com",
+      "user_role": "admin",
+      "timestamp": "2026-05-05T07:23:20.476252+00:00",
+      "details": {
+        "patient": {
+          "id": "P-C16B625C",
+          "name": "Test Patient",
+          "age": 30,
+          "gender": "Male",
+          "phone": "gAAAAABp-ZroYMRrZQN_1BEWW1TsfWIAhiPOIbO3AmvPQZkaP5KxqDNfzJJNJxnbX6lFM3DhHH5wDDqSwEAvG-tbUGbFHAc5IA==",
+          "phone_search": "9876543210",
+          "address": "gAAAAABp-Zro1ZsdWxpuV1oreujdr7bL_8RVxo8z9Y0IAmRln6AwsPDlnm-XVPpFy0ZUv0u6bFNeW3MW87eKic2e-avqasWdhA==",
+          "blood_group": "A+",
+          "created_at": "2026-05-05T07:23:20.474039+00:00",
+          "updated_at": "2026-05-05T07:23:20.474039+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "admin@example.com",
+          "updated_by": "admin@example.com",
+          "_id": "69f99ae8127842796ebddb3b"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-A624C992",
+      "action": "create",
+      "user_email": "admin@example.com",
+      "user_role": "admin",
+      "timestamp": "2026-05-05T07:23:58.315275+00:00",
+      "details": {
+        "patient": {
+          "id": "P-A624C992",
+          "name": "Test Patient",
+          "age": 30,
+          "gender": "Male",
+          "phone": "gAAAAABp-ZsO_hRWxxAOzdOzuiQuMzm9XMDss33OQ78BuK7xYfJ5GbZQTd628Ge9Zj_2xqIgAxwrU7-ybr6_OLGeIDlhxvQVhw==",
+          "phone_search": "9876543210",
+          "address": "gAAAAABp-ZsOVeBvWf2G4ZFo_T97HOhph7lTHY3Ec0uPKzDzgjLy4Kqydpv3uUxr7fpePUEjEFTcCTUbAM_btVn8oeW2ELtxXQ==",
+          "blood_group": "A+",
+          "created_at": "2026-05-05T07:23:58.313748+00:00",
+          "updated_at": "2026-05-05T07:23:58.313748+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "admin@example.com",
+          "updated_by": "admin@example.com",
+          "_id": "69f99b0e127842796ebddb3d"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-A46110B6",
+      "action": "create",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:28:40.510743+00:00",
+      "details": {
+        "patient": {
+          "id": "P-A46110B6",
+          "name": "vibhore sharma",
+          "age": 29,
+          "gender": "Male",
+          "phone": "gAAAAABp-ZwoN5n5YWENprTp5L2F_cjqYl9l--XIWiV5KcPKm1cfUn1c7gy_uiOs3vTrYliGUZbARBzStHIj8hb-SSsISlbbVw==",
+          "phone_search": "09668872405",
+          "address": "gAAAAABp-ZwoESBBliRVRDcwQWcH8C3rSDn-tJnoH63Yc3NCcbxuhqeP0eEUM99NZWwgEHDXLb9Rk5S7w2r9lnA4a_SE-sUdItpJEF7sajY6Oe6Et4jT3js=",
+          "blood_group": "O-",
+          "created_at": "2026-05-05T07:28:40.506861+00:00",
+          "updated_at": "2026-05-05T07:28:40.506861+00:00",
+          "deleted_at": null,
+          "is_deleted": false,
+          "created_by": "vijay.sharma@kumarayurveda.com",
+          "updated_by": "vijay.sharma@kumarayurveda.com",
+          "_id": "69f99c28a61fd4139fecd110"
+        }
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-A46110B6",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:32:56.250037+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:32:56.241000+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-A624C992",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:32:57.884471+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:32:57.882173+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-C16B625C",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:32:59.519019+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:32:59.512986+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-5E103C9D",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:33:00.994055+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:33:00.991582+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-8D02B7FA",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:33:04.952049+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:33:04.944560+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-BD804CA5",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:33:06.610714+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:33:06.607818+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    },
+    {
+      "collection": "patients",
+      "record_id": "P-317C3D25",
+      "action": "delete",
+      "user_email": "vijay.sharma@kumarayurveda.com",
+      "user_role": "doctor",
+      "timestamp": "2026-05-05T07:33:08.620846+00:00",
+      "details": {
+        "deleted_at": "2026-05-05T07:33:08.619094+00:00",
+        "deleted_by": "vijay.sharma@kumarayurveda.com"
+      }
+    }
+  ]
+}

@@ -10,7 +10,7 @@ import { Label } from '../components/ui/label';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Search, Plus, Eye } from 'lucide-react';
+import { Search, Plus, Eye, Trash2 } from 'lucide-react';
 
 const API = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
 
@@ -23,6 +23,7 @@ export default function PatientsPage() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [form, setForm] = useState({ name: '', age: '', gender: '', phone: '', address: '', blood_group: '' });
   const [saving, setSaving] = useState(false);
+  const [deletingId, setDeletingId] = useState(null);
 
   useEffect(() => { fetchPatients(); }, []);
 
@@ -46,8 +47,22 @@ export default function PatientsPage() {
       setForm({ name: '', age: '', gender: '', phone: '', address: '', blood_group: '' });
       fetchPatients(search);
     } catch (err) {
-      toast.error(err.response?.data?.detail || 'Failed to register patient');
+      toast.error(err.response?.data?.detail || t('failedToRegisterPatient'));
     } finally { setSaving(false); }
+  };
+
+  const handleDelete = async (patientId, patientName) => {
+    if (!window.confirm(`${t('deletePatientConfirm')} ${patientName}?`)) return;
+    setDeletingId(patientId);
+    try {
+      await axios.delete(`${API}/api/patients/${patientId}`);
+      toast.success(t('patientDeleted'));
+      fetchPatients(search);
+    } catch (err) {
+      toast.error(err.response?.data?.detail || t('failedToDeletePatient'));
+    } finally {
+      setDeletingId(null);
+    }
   };
 
   return (
@@ -152,9 +167,12 @@ export default function PatientsPage() {
                     <TableCell className="text-sm text-muted-foreground">{p.gender}</TableCell>
                     <TableCell className="text-sm text-muted-foreground">{p.phone}</TableCell>
                     <TableCell><span className="text-xs px-2 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400 font-medium">{p.blood_group || '-'}</span></TableCell>
-                    <TableCell>
+                    <TableCell className="space-x-2">
                       <Button variant="ghost" size="sm" className="text-[#0EA5E9] hover:text-[#0284C7]" onClick={() => navigate(`/patients/${p.id}`)} data-testid={`view-patient-${p.id}`}>
                         <Eye size={14} className="mr-1" /> {t('view')}
+                      </Button>
+                      <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-800" onClick={() => handleDelete(p.id, p.name)} disabled={deletingId === p.id} data-testid={`delete-patient-${p.id}`}>
+                        <Trash2 size={14} className="mr-1" /> {t('delete')}
                       </Button>
                     </TableCell>
                   </TableRow>
